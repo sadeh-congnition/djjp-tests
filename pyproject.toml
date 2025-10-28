@@ -1,0 +1,26 @@
+[project]
+name = "djjp-new"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bpython>=0.25",
+    "django>=5.2.7",
+    "django-async-job-pipelines",
+    "django-click>=2.4.1",
+    "django-extensions>=4.1",
+    "pytest>=8.4.2",
+    "setuptools>=80.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "isort>=7.0.0",
+    "pytest>=8.4.2",
+    "pytest-django>=4.11.1",
+    "rich>=14.2.0",
+]
+
+[tool.uv.sources]
+django-async-job-pipelines = { path = "../django-async-job-pipelines", editable = true }
