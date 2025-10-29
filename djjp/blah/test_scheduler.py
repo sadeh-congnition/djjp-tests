@@ -2,7 +2,7 @@ import pytest
 from time import sleep
 from datetime import timedelta
 from django.utils import timezone
-from django_async_job_pipelines.jobs import Job, job
+from django_async_job_pipelines.jobs import job
 from django_async_job_pipelines.models import ScheduledJob
 from django_async_job_pipelines.scheduler import (
     Scheduler,
@@ -140,7 +140,3 @@ def test_one_job_due_to_run(db, scheduler_registry):
     jobs = [j for j in get_scheduled_jobs_to_run()]
 
     assert len(jobs) == 1
-
-
-def test_create_scheduled_job(db):
-    pass

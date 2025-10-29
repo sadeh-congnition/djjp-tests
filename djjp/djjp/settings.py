@@ -130,7 +130,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 DJJP = {
     "concurrency": "threads",
-    "concurrency_limit": 5,
+    "concurrency_limit": 200,
     "db_name": "default",
     "scheduler_interval": 10,
+    "stuck_jobs_requeue_interval": 60,
 }

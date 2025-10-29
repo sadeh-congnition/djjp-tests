@@ -60,6 +60,7 @@ def test_run_job_background_with_good_function_args(db):
     j = JobDBModel.objects.first()
     assert j.status == JobDBModel.Status.DONE, j.error
     assert not j.error
+    assert j.should_run_by
 
 
 def test_lock_new_job_for_running(db):
